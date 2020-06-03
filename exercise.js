@@ -12,6 +12,9 @@ The call to console.log should first have the string
 and then the second argument.
 */
 
+function logArgs(a, b) {
+    console.log('Called with', a, b);
+}
 
 
 /*
@@ -33,4 +36,17 @@ For example:
 
 extractNumber(‘GSX-444’); // returns 444
 extractNumber(‘GSX-9867990’); // returns 9867990
+*/
+
+function extractNumber(code) {
+    var numberPart = code.substr(4);
+    return Number(numberPart);
+}
+
+/* another solving method
+
+function extractNumber(code) {
+    var numberPart = code.replace('GSX-', '');
+    return Number(numberPart);
+}
 */
